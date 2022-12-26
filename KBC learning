@@ -1,0 +1,52 @@
+name = input("Enter Your Name:")
+print("Welcome to KBC", name)
+q1 = ["What is the capital of India?"]
+a1 = [["A", 'Mumbai'], ["B", "Banglore"], ["C", "Delhi"], ["D", "Chennai"]]
+print(q1)
+print(a1[0])
+print(a1[1])
+print(a1[2])
+print(a1[3])
+aa1 = input("Enter your option in capital letters:")
+if (aa1 == "C"):
+  print("Right")
+else:
+  print("Wrong")
+print("\n\n")
+q2 = ["Who is the prime minister of india?"]
+a2 = [["A", "Yogi"], ["B", "Salman"], ["C", "Shahrukh"], ["D", "Modi"]]
+print(q2)
+print(a2[0])
+print(a2[1])
+print(a2[2])
+print(a2[3])
+aa2 = input("Enter your option in capital letters:")
+if (aa2 == "D"):
+  print("Right")
+else:
+  print("Wrong")
+
+print("\n")
+sum = 0
+if (aa1 == "C" and aa2 == "D"):
+  sum = sum + 2000
+  print(sum)
+elif (aa1 == "C"):
+  if (aa2 != "D"):
+    sum = sum + 1000
+    print(sum)
+  else:
+    sum = 2000
+    print(sum)
+elif (aa2 == "D"):
+  if (aa1 != "C"):
+    sum = sum + 1000
+    print(sum)
+  else:
+    sum = 2000
+    print(sum)
+
+if (sum != 0):
+  print("Congratulations,", name, "You have Won", sum)
+else:
+  print("Better Luck Next Time")
