@@ -1,0 +1,52 @@
+
+print("Simulation of K.B.C India")
+print("""NOTE:
+1-THIS GAME IS BASED ON LEVELS.THERE ARE TOTAL OF 10 LEVELS
+2-THIS IS JUST A SAMPLE AND FOR LEARNING PURSPOSE.
+3-IF ANY YOU THINK OF ANY IMRPOVEMENT PLEASE LET ME KNOW.
+4-THESE ARE JUST RANDOM QUESTIONS AND ANSWERS AND JUST FOR FUN. PLEASE DONT GET OFFEND
+5- HOPE YOU ENJOY\n\n""")
+enter=input("\t\t\tPress Enter key to continue")
+
+
+question=[["What is the name of Prime Minister of India?","Narendra Modi","Sharukh","Salman","Arwind Kejriwal","None",1],
+["What is the name of Biggest Continent?","North America","South America","Asia","Europe","None",3],
+["Which is the prime number from following?","0","3","1","4","None",2],
+["Who is the CEO of the Google?","Sundar Pichai","Elon Musk","Salman","TATE","None",1],
+["What is meant by Schema?","Data Entry","Analysis","Drawing","Logical Representation","None",4],
+["Which is Alkane among all?","c2h2","c6h6","c4h4","NOTA","None",4],
+["Besides Sachin Tendulkar, who is the only other Indian cricketer to have scored over 13,000 runs in test cricket?","Virat","Dhoni","Ganguli","Rahul Dravid","None",5],
+["Ranthambore, Sariska and Keoladeo Ghana are all names of what?","National Park","Rivers","Goosebumps","Mountains","None",2],
+[" In terms of production, which of these is the largest train coach manufacturing unit in the world?"," Bangalore"," Mumbai"," Chennai"," Kolkata","None",3],
+["What is the profession of Kabir in the film Kabir Singh?","Lawyer","Engineer","Athlete","Doctor","None",4],]
+
+
+levels = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
+                                                   
+money = 0                                           
+
+for i in range(0,len(question)):
+
+    ques=question[i]                                
+    print(f"\nQuestion for Rupees {levels[i]}")       
+    print(f"1.{ques[1]}     2.{ques[2]}")         
+    print(f"3.{ques[3]}     4.{ques[4]}")
+    reply=int(input("Enter Your Choice(1-4) or 0 to Quit:"))
+    if((reply==0 or reply!=ques[-1]) and i==0):
+        money=0                       
+        break
+    elif(reply==0 or reply!=ques[-1]):
+        money=levels[i-1]
+        break
+                                                    
+    if(reply==ques[-1]):                            
+        print(f"Congratulations You Have Won Rs.{levels[i]}\n")
+        if(i==4):                                
+            money=10000
+        elif(i==9):
+            money=320000
+    else:
+        print("\nWrong Answer, Better luck next time")
+        break
+
+print(f"\nYour Final Prize Amount is Rs.{money}")
