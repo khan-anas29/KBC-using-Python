@@ -1,4 +1,3 @@
 ye likha first line main file mai
-ye likha 2nd line main branch mai
-ye likha maine 2nd branch pe 3rd line.
-ye likha 4th line main branch mai
+3 line hata di in second branch
+
